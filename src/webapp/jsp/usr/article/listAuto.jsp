@@ -5,7 +5,7 @@
 
 <script>
     let Articles__lastId = 0;
-    function Article__loadMore() {
+    function Articles__loadMore() {
 
         fetch(`/usr/articles/getArticles/free?fromId=${Articles__lastId}`)
             .then(data => data.json())
@@ -17,6 +17,8 @@
                     const html = `
                         <li> \${article.id} </li>
                     `;
+
+                    $('.articles').append(html);
                 }
             });
     }
@@ -32,7 +34,7 @@
 
         <hr>
 
-        <button class="btn btn-sm" onclick="Article__loadMore()">Load</button>
+        <button class="btn btn-sm" onclick="Articles__loadMore()">Load</button>
     </div>
 </section>
 
