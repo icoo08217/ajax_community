@@ -29,6 +29,9 @@
                 if (articles.length > 0) {
                     Articles__lastId = articles[articles.length - 1].id;
                 }
+
+                //Articles__loadMore(); // 즉시실행
+                setTimeout(Articles__loadMore, 3000);  // Articles__loadMore(); 를 3초 뒤에 수행
             });
     }
 </script>
