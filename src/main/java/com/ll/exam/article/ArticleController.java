@@ -135,9 +135,7 @@ public class ArticleController {
 
         List<ArticleDto> articleDtos = articleService.findAll();
 
-        ResultData<List<ArticleDto>> resultData = new ResultData("성공", "S-1", articleDtos);
-
-        rq.json(resultData);
+        rq.successJson(articleDtos);
 
     }
 }
