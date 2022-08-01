@@ -65,6 +65,8 @@ public class DispatchServlet extends HttpServlet {
                     case "/usr/chat/writeMessage":
                         chatController.doWriteMessage(rq);
                         break;
+                    case "/usr/chat/writeMessageAjax":
+                        chatController.doWriteMessageAjax(rq);
                     case "/usr/chat/createRoom":
                         chatController.doCreateRoom(rq);
                         break;
