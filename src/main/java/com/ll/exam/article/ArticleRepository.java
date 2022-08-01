@@ -67,9 +67,9 @@ public class ArticleRepository {
     }
 
     public List<ArticleDto> findAllIdGreaterThan(long fromId) {
-            return datum
-                    .stream()
-                    .filter(articleDto -> articleDto.getId() > fromId)
-                    .collect(Collectors.toList());
+        return datum
+                .stream()
+                .filter(articleDto -> articleDto.getId() > fromId)
+                .collect(Collectors.toList());
     }
 }
