@@ -12,7 +12,7 @@
         }
         // fetch 방식이 아닌, jquery 방식
         $.post(
-            '/usr/chat/writeMessageAjax/${room.id}' // 주소, action
+            '/usr/chat/writeMessageAjax/${room.id}', // 주소, action
         {
             body: form.body.value // 폼 내용, input name, value
         },
