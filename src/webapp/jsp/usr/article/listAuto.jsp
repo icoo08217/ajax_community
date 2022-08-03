@@ -12,6 +12,7 @@
                 const articles = responseData.data;
                 for ( const index in articles ) {
                     const article = articles[index];
+
                     const html = `
                     <li class="flex">
                         <a class="w-[40px] hover:underline hover:text-[red]" href="/usr/article/detail/free/\${article.id}">\${article.id}</a>
@@ -20,11 +21,14 @@
                         <a class="hover:underline hover:text-[red]" href="/usr/article/modify/free/\${article.id}">수정</a>
                     </li>
                 `;
+
                     $('.articles').append(html);
                 }
+
                 if ( articles.length > 0 ) {
                     Articles__lastId = articles[articles.length - 1].id;
                 }
+
                 // Articles__loadMore(); // 즉시 실행
                 setTimeout(Articles__loadMore, 3000); // Articles__loadMore(); 를 3초 뒤에 수행
             });
